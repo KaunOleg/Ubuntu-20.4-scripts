@@ -38,7 +38,7 @@ wget --no-check-certificate -O - https://debian.neo4j.org/neotechnology.gpg.key 
 echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 apt update 
 apt install neo4j -y
-mv neo4j.conf /etc/neo4j
+cp -f neo4j.conf /etc/neo4j
 service neo4j restart
 iptables -A INPUT -p tcp --dport 7474 -j ACCEPT
 iptables -A INPUT -p tcp --dport 7687 -j ACCEPT
