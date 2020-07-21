@@ -54,12 +54,9 @@ echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongod
 apt-get update
 apt-get install -y mongodb-org
 systemctl start mongod
-systemctl status mongod
-systemctl enable mongod
 echo "--------------------OK--------------------" 
 
 echo "--------------------Установка Redis--------------------"
 apt update
 apt install redis-server -y
-systemctl status redis-server
 echo "--------------------OK--------------------" 
