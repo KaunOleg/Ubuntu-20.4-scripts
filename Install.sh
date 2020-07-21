@@ -35,3 +35,10 @@ echo "--------------------Установка MySQL--------------------"
 apt update
 apt install mysql-server -y
 echo "--------------------OK--------------------" 
+
+echo "--------------------Установка Neo4j--------------------"
+wget --no-check-certificate -O - https://debian.neo4j.org/neotechnology.gpg.key | sudo apt-key add -
+echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
+apt update 
+apt install neo4j -y
+echo "--------------------OK--------------------" 
