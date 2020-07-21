@@ -60,3 +60,8 @@ echo "--------------------Установка Redis--------------------"
 apt update
 apt install redis-server -y
 echo "--------------------OK--------------------" 
+
+echo "--------------------Установка NGinx--------------------"
+apt install nginx
+systemctl status nginx
+echo "--------------------OK--------------------"
