@@ -57,3 +57,9 @@ systemctl start mongod
 systemctl status mongod
 systemctl enable mongod
 echo "--------------------OK--------------------" 
+
+echo "--------------------Установка Redis--------------------"
+apt update
+apt install redis-server -y
+systemctl status redis-server
+echo "--------------------OK--------------------" 
