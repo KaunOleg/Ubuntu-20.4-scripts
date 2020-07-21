@@ -4,7 +4,6 @@ echo "--------------------OK--------------------"
 
 echo "--------------------Установка Docker--------------------"
 apt-get remove docker docker-engine docker.io containerd runc
-apt-get update
 apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -27,12 +26,10 @@ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.
 dpkg -i packages-microsoft-prod.deb
 apt-get update
 apt-get install -y dotnet-sdk-3.1
-apt-get update
 apt-get install -y aspnetcore-runtime-3.1
 echo "--------------------OK--------------------" 
 
 echo "--------------------Установка MySQL--------------------"
-apt update
 apt install mysql-server -y
 echo "--------------------OK--------------------" 
 
@@ -57,7 +54,6 @@ systemctl start mongod
 echo "--------------------OK--------------------" 
 
 echo "--------------------Установка Redis--------------------"
-apt update
 apt install redis-server -y
 echo "--------------------OK--------------------" 
 
