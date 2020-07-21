@@ -46,3 +46,14 @@ service neo4j restart
 iptables -A INPUT -p tcp --dport 7474 -j ACCEPT
 iptables -A INPUT -p tcp --dport 7687 -j ACCEPT
 echo "--------------------OK--------------------" 
+
+echo "--------------------Установка MongoDB--------------------"
+apt-get install gnupg -y
+wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+apt-get update
+apt-get install -y mongodb-org
+systemctl start mongod
+systemctl status mongod
+systemctl enable mongod
+echo "--------------------OK--------------------" 
