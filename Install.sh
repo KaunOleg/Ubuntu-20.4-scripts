@@ -62,6 +62,6 @@ apt install redis-server -y
 echo "--------------------OK--------------------" 
 
 echo "--------------------Установка NGinx--------------------"
-apt install nginx
+apt install nginx -y
 systemctl status nginx
 echo "--------------------OK--------------------"
